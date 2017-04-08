@@ -1,3 +1,7 @@
 ion-view.page-home(view-title='home')
     ion-content
-        
+        .card
+            ion-list
+                ion-item(ng-repeat='repo in ctrl.repos') 
+                    h2 {{repo.name}}
+                    p {{repo.description}}

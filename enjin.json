@@ -48,10 +48,8 @@
             "messagingSenderId": "1095408930151"
         }
     },
-    "db": {
-        "api": {
-            "host": "http://api.madnessenjin.dev/v1/"
-        }
+    "api": {
+        "host": "http://api.madnessenjin.dev/v1/"
     },
     "html": {
         "dir": "html/",

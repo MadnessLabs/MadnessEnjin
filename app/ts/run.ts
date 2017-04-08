@@ -7,14 +7,15 @@ module MadnessEnjin {
 			FireEnjin,
             $rootScope, 
             enjin, 
+            API,
             $state, 
             $ionicLoading, 
             $ionicSideMenuDelegate,
             Platform
         ) {
             $rootScope.host = {
-                api: enjin.db.api.host.slice(0, -3),
-                apiFull: enjin.db.api.host,
+                api: enjin.api.host.slice(0, -3),
+                apiFull: enjin.api.host,
                 url: enjin.url
             };
 

@@ -11,8 +11,20 @@ module MadnessEnjin {
         }
 
         socialLogin(type) {
-            this.enjin.auth.withSocial(type, () => {
-                this.$state.go('home');
+            this.enjin.auth.withSocial(type, (account) => {
+                this.enjin.api.post(`user/login`, {
+                    email: account.user.email, 
+                    token: account.credential.accessToken,
+                    name: account.user.displayName,
+                    avatar: account.user.photoURL
+                }).then((response) => {
+                    if (response.success) {
+                        this.enjin.auth.setSessionVar('id', response.data.id);
+                        this.$state.go('home');
+                    } else {
+                        console.log(response.data);
+                    }
+                });
             });
         }
     }

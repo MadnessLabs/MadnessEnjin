@@ -28,6 +28,7 @@ module MadnessEnjin {
                 instance: this.$firebaseAuth(),
                 withSocial: this.withSocial.bind(this),
                 setSession: this.restoreSession.bind(this),
+                setSessionVar: this.setSessionVar.bind(this),
                 withEmail: this.withEmail.bind(this),
                 logout: this.logout.bind(this)
             };
@@ -105,6 +106,11 @@ module MadnessEnjin {
             if (!this.enjin.session && localStorage.getItem(this.enjin.name + 'Session')) {
                 this.setSession(JSON.parse(localStorage.getItem(this.enjin.name + 'Session')));
             }
+        }
+
+        setSessionVar(name, value, callback = null) {
+            this.enjin.session[name] = value;
+            this.setSession(this.enjin.session, callback);
         }
 
         setSession(user, callback = null) {
