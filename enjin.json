@@ -13,7 +13,7 @@
     "local": true,
     "debug": true,
     "url": "http://madnessenjin.net/",
-    "version": "1.0.0-beta",
+    "version": "1.0.0-alpha",
     "defaultRoute": "home",
     "routes": [{
         "state": "home",
