@@ -1,3 +1,5 @@
+# Madness Enjin App
+
 * [Welcome](#welcome)
 * [Dependencies](#dependencies)
     * [References](#references)

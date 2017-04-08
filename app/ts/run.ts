@@ -4,6 +4,7 @@ module MadnessEnjin {
 
     class AppRunner {
         constructor(
+			FireEnjin,
             $rootScope, 
             enjin, 
             $state, 

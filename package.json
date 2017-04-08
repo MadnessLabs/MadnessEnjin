@@ -8,10 +8,21 @@
     "build": "gulp build"
   },
   "dependencies": {
+    "angularfire": "^2.3.0",
+    "firebase": "^3.7.5",
+    "fireenjin": "github:madnesslabs/fireenjin",
     "gulp": "^3.9.0",
     "gulp-require-tasks": "^1.0.5",
     "ionic-sdk": "https://github.com/driftyco/ionic/tarball/v1.3.0",
-    "ng-cordova": "^0.1.27-alpha"
+    "jssha": "^2.2.0",
+    "ng-cordova": "^0.1.27-alpha",
+    "ng-cordova-oauth": "^0.3.0"
   },
-  "cordovaPlugins": ["cordova-plugin-device", "cordova-plugin-console", "cordova-plugin-whitelist", "cordova-plugin-splashscreen", "ionic-plugin-keyboard"]
+  "cordovaPlugins": [
+    "cordova-plugin-device",
+    "cordova-plugin-console",
+    "cordova-plugin-whitelist",
+    "cordova-plugin-splashscreen",
+    "ionic-plugin-keyboard"
+  ]
 }
