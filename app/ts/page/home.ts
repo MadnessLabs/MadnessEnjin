@@ -3,14 +3,14 @@ module MadnessEnjin {
     'use strict';
 
     class HomeController {
-        repos: any;
+        organizations: any;
 
         constructor(
             protected enjin
         ) {
             // ON LOAD
             enjin.api.get(`app/${enjin.session.id}`).then((res) => {
-                this.repos = res.data;
+                this.organizations = res.data;
             });  
         }
     }

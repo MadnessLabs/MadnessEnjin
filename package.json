@@ -16,7 +16,8 @@
     "ionic-sdk": "https://github.com/driftyco/ionic/tarball/v1.3.0",
     "jssha": "^2.2.0",
     "ng-cordova": "^0.1.27-alpha",
-    "ng-cordova-oauth": "^0.3.0"
+    "ng-cordova-oauth": "^0.3.0",
+    "ng-material-floating-button": "^0.6.2"
   },
   "cordovaPlugins": [
     "cordova-plugin-device",

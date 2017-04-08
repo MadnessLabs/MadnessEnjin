@@ -1,7 +1,15 @@
-ion-view.page-home(view-title='home')
+ion-view.page-home(view-title='Home')
     ion-content
         .card
             ion-list
-                ion-item(ng-repeat='repo in ctrl.repos') 
-                    h2 {{repo.name}}
-                    p {{repo.description}}
+                ion-item.item-avatar(ng-repeat='org in ctrl.organizations') 
+                    img(ng-src='{{org.avatar}}')
+                    h2 {{org.name}}
+                    p(ng-repeat='repo in org.repos') {{repo.name}}
+    button(
+        mfb-menu
+        position='br'
+        resting-icon='ion-plus-round'
+        active-icon='ion-plus-round'
+        ui-sref="appsNew"
+    )

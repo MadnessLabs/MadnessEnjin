@@ -28,12 +28,19 @@
         "templateUrl": "html/page/login.html",
         "controller": "MadnessEnjin.LoginController",
         "controllerAs": "ctrl"
+    }, {
+        "state": "appsNew",
+        "url": "/appsNew",
+        "templateUrl": "html/page/appsNew.html",
+        "controller": "MadnessEnjin.AppsNewController",
+        "controllerAs": "ctrl"
     }],
     "plugins": [
         "ionic",
         "ngCordova",
         "firebase",
-        "ngCordovaOauth"
+        "ngCordovaOauth",
+        "ng-mfb"
     ],
     "google": {
         "analytics": {
@@ -67,7 +74,7 @@
         "srcDir": "app/scss/",
         "vars": {
             "theme": {
-                "primary": "#0F78B9",
+                "primary": "#0B58B7",
                 "secondary": "#0090ED",
                 "warning": "#EF473A",
                 "dark-gray": "#666666",
@@ -101,7 +108,8 @@
             "icons-font-size": "24px !default"
         },
         "libraries": [
-            "node_modules/ionic-sdk/scss/ionic.scss"
+            "node_modules/ionic-sdk/scss/ionic.scss",
+            "node_modules/ng-material-floating-button/mfb/src/mfb.scss"
         ],
         "build": [
             "build/css/libraries.css",
@@ -128,7 +136,8 @@
             "node_modules/angularfire/dist/angularfire.js",
             "node_modules/firebase/firebase.js",
             "node_modules/jssha/src/sha.js",
-            "node_modules/ng-cordova-oauth/dist/ng-cordova-oauth.js"
+            "node_modules/ng-cordova-oauth/dist/ng-cordova-oauth.js",
+            "node_modules/ng-material-floating-button/src/mfb-directive.js"
         ],
         "build": [
             "build/js/app.js",
