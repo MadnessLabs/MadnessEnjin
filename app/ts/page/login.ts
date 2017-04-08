@@ -12,14 +12,14 @@ module MadnessEnjin {
 
         socialLogin(type) {
             this.enjin.auth.withSocial(type, (account) => {
-                this.enjin.api.post(`user/login`, {
+                this.enjin.api.post(`login`, {
                     email: account.user.email, 
-                    token: account.credential.accessToken,
+                    github_token: account.credential.accessToken,
                     name: account.user.displayName,
                     avatar: account.user.photoURL
                 }).then((response) => {
                     if (response.success) {
-                        this.enjin.auth.setSessionVar('id', response.data.id);
+                        this.enjin.auth.setSessionVar('token', response.data.token);
                         this.$state.go('home');
                     } else {
                         console.log(response.data);

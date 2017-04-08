@@ -113,10 +113,15 @@ module MadnessEnjin {
             this.setSession(this.enjin.session, callback);
         }
 
+        setHeader(token) {
+            this.$http.defaults.headers.common.Authorization = token;
+        }
+
         setSession(user, callback = null) {
             if (user) {
                 this.enjin.session = this.$rootScope.session = user;
-                localStorage.setItem(this.enjin.name + 'Session', JSON.stringify(this.enjin.session));    
+                localStorage.setItem(this.enjin.name + 'Session', JSON.stringify(this.enjin.session)); 
+                this.setHeader(user.token);  
                 if (callback && typeof callback === 'function') {
                     callback(user);
                 }    

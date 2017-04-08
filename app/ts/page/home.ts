@@ -9,7 +9,7 @@ module MadnessEnjin {
             protected enjin
         ) {
             // ON LOAD
-            enjin.api.get(`app/${enjin.session.id}`).then((res) => {
+            enjin.api.get(`app`).then((res) => {
                 this.organizations = res.data;
             });  
         }
