@@ -1,0 +1,59 @@
+// IMPORTS
+@import "../variables";
+
+// COMPONENT STYLES
+enjin-input {
+    .item-input {
+        border: none;
+        border-bottom: 3px solid #666666;
+        -webkit-transition: border 0.2s linear;
+        transition: border 0.2s linear;
+        .input-label {
+            font-weight: bold;
+            color: #666666;
+            text-transform: capitalize;
+        }
+        input {
+            color: #FFFFFF;
+        }
+
+        &.focused {
+            .input-label {
+                top: 0;
+                opacity: 1;
+            }
+            border-bottom: 3px solid $theme-primary;
+        }
+
+        &.invalid {
+            border-bottom: 3px solid $theme-warning;
+        }
+
+        &.filled {
+            .input-label {
+                top: 0;
+                opacity: 1;
+            }
+        }
+    }
+
+    @media (max-width: $screen-xl) {
+
+    }
+
+    @media (max-width: $screen-lg) {
+
+    }
+
+    @media (max-width: $screen-md) {
+
+    }
+
+    @media (max-width: $screen-sm) {
+
+    }
+
+    @media (max-width: $screen-xs) {
+
+    }
+}

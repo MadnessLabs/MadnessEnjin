@@ -1,0 +1,12 @@
+.item.item-input.item-floating-label(ng-class='{"focused": focusedInput == name, "filled": model, "invalid": invalidInput }')
+    label.input-label(ng-if='label') {{label}}
+    input(
+        type='{{type}}'
+        name='{{name}}'
+        ng-model='model'
+        placeholder='{{placeholder}}'
+        ng-focus='onFocus($event)'
+        ng-blur='onBlur($event)'
+        ng-required="required"
+        ng-pattern='pattern'
+    )

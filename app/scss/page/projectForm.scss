@@ -2,7 +2,13 @@
 @import "../variables";
 
 // PAGE STYLES
-.page-appsNew {
+.page-projectForm {
+    form {
+        max-width: 600px;
+        margin: 0 auto;
+        display: block;
+    }
+
     @media (max-width: $screen-xl) {
 
     }

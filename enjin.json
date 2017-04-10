@@ -17,7 +17,7 @@
     "defaultRoute": "home",
     "routes": [{
         "state": "home",
-        "url": "/home",
+        "url": "/projects",
         "templateUrl": "html/page/home.html",
         "controller": "MadnessEnjin.HomeController",
         "controllerAs": "ctrl",
@@ -29,10 +29,10 @@
         "controller": "MadnessEnjin.LoginController",
         "controllerAs": "ctrl"
     }, {
-        "state": "appsNew",
-        "url": "/appsNew",
-        "templateUrl": "html/page/appsNew.html",
-        "controller": "MadnessEnjin.AppsNewController",
+        "state": "newProject",
+        "url": "/projects/new",
+        "templateUrl": "html/page/projectForm.html",
+        "controller": "MadnessEnjin.ProjectFormController",
         "controllerAs": "ctrl"
     }],
     "plugins": [
@@ -76,7 +76,7 @@
             "theme": {
                 "primary": "#0B58B7",
                 "secondary": "#0090ED",
-                "warning": "#EF473A",
+                "warning": "#A7261C",
                 "dark-gray": "#666666",
                 "light-gray": "#BDBDBD"
             },

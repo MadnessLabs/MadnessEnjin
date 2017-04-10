@@ -1,0 +1,28 @@
+ion-view.page-projectForm(view-title='New Project')
+    ion-content
+        p {{ctrl.project}}
+        form(
+            name='projectForm'
+            ng-submit='ctrl.save()'
+            novalidate
+        )
+            enjin-input(
+                model='ctrl.project.name'
+                placeholder='Name your new app'
+                name='name'
+                required='true'
+            )
+    button(
+        mfb-menu
+        position='bl'
+        resting-icon='ion-arrow-left-c'
+        active-icon='ion-arrow-left-c'
+        ng-click='home'
+    )
+    button(
+        mfb-menu
+        position='br'
+        resting-icon='ion-checkmark-round'
+        active-icon='ion-checkmark-round'
+        ng-click='ctrl.submit()'
+    )

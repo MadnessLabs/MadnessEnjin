@@ -10,6 +10,7 @@ module MadnessEnjin {
         ) {
             // ON LOAD
             enjin.api.get(`app`).then((res) => {
+                console.log(res.data);
                 this.organizations = res.data;
             });  
         }
