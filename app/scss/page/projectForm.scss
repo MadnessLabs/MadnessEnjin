@@ -5,8 +5,80 @@
 .page-projectForm {
     form {
         max-width: 600px;
+        width: 90%;
         margin: 0 auto;
         display: block;
+    }
+
+    h2 {
+        font-size: 16px;
+        color: #666666;
+        font-weight: bold;
+        margin-top: 15px;
+        text-indent: 15px;
+    }
+
+
+    $bubble-size: 75px;
+    #org {
+        height: 115px;
+        margin: 15px 0 0 0;
+        white-space: nowrap;
+        overflow: visible;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        .bubble-wrap {
+            width: 100px;
+            display: inline-block;
+            .bubble {
+                width: 75px;
+                height: 75px;
+                display: block;
+                margin: 0 auto;
+                border-radius: 100%;
+                overflow: hidden;
+                border: 3px solid #666666;
+                cursor: pointer;
+                img {
+                    width: 100%;
+                }
+            }
+            p {
+                padding-top: 10px;
+                color: #FFFFFF;
+                font-size: 14px;
+                width: 100%;
+                text-align: center;
+                display: block;
+            }
+            &:hover {
+                .bubble {
+                    border-color: #FFFFFF;
+                }
+            }
+
+            &.selected {
+                .bubble {
+                    border-color: $theme-primary;
+                    position: relative;
+                    &:after {
+                        font-family: "Ionicons";
+                        content: "\f121";
+                        position: absolute;
+                        text-align: center;
+                        color: #FFFFFF;
+                        line-height: $bubble-size;
+                        font-size: 30px;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        background-color: rgba(0, 0, 0, 0.5);
+                    }
+                }
+            }
+        }
     }
 
     @media (max-width: $screen-xl) {

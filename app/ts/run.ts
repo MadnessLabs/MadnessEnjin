@@ -19,16 +19,16 @@ module MadnessEnjin {
                 url: enjin.url
             };
 
-            $rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState) {
-                $rootScope.showSidebar = true;
-            });
+            // $rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState) {
+            //     $rootScope.showSidebar = true;
+            // });
 
             $rootScope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState) {
                 $state.previous = fromState;
             });
 
             $rootScope.$on('loading:show', function() {
-                $ionicLoading.show({ template: '<img src="./img/loader.gif" />' });
+                $ionicLoading.show({ template: '<ion-spinner icon="crescent" class="spinner-light"></ion-spinner>' });
             });
 
             $rootScope.$on('loading:hide', function() {

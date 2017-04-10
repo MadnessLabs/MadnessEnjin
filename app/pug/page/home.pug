@@ -1,11 +1,7 @@
 ion-view.page-home(view-title='Home')
     ion-content(padding='true')
         .card
-            ion-list
-                ion-item.item-avatar(ng-repeat='org in ctrl.organizations') 
-                    img(ng-src='{{org.avatar}}')
-                    h2 {{org.name}}
-                    p(ng-repeat='repo in org.repos') {{repo.name}}
+            ion-item(ng-repeat='project in ctrl.projects') {{project.name}}
     button(
         mfb-menu
         position='br'

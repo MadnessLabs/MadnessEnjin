@@ -3,16 +3,15 @@ module MadnessEnjin {
     'use strict';
 
     class HomeController {
-        organizations: any;
+        projects: any;
 
         constructor(
-            protected enjin
+            protected Project
         ) {
             // ON LOAD
-            enjin.api.get(`app`).then((res) => {
-                console.log(res.data);
-                this.organizations = res.data;
-            });  
+            this.Project.all((data) => {
+                this.projects = data;
+            });
         }
     }
 

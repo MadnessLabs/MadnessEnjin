@@ -1,23 +1,34 @@
 ion-view.page-projectForm(view-title='New Project')
     ion-content
-        p {{ctrl.project}}
+        p {{ctrl.project.organization}}
         form(
+            submit-on='submitForm'
             name='projectForm'
             ng-submit='ctrl.save()'
-            novalidate
         )
+            h2 Github Organization
+            ion-scroll#org(direction='x')
+                .bubble-wrap(
+                    ng-repeat='org in ctrl.organizations'
+                    ng-click='ctrl.project.organization = org.user ? null : org.name'
+                    ng-class='{"selected": ctrl.project.organization == org.name || org.user && ctrl.project.organization == null}'
+                )
+                    .bubble
+                        img(ng-src='{{org.avatar}}')
+                    p {{org.name}}
             enjin-input(
                 model='ctrl.project.name'
                 placeholder='Name your new app'
                 name='name'
                 required='true'
+                auto-focus='true'
             )
     button(
         mfb-menu
         position='bl'
         resting-icon='ion-arrow-left-c'
         active-icon='ion-arrow-left-c'
-        ng-click='home'
+        ng-click='ctrl.back()'
     )
     button(
         mfb-menu
