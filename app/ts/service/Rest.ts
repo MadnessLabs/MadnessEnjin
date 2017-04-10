@@ -18,8 +18,8 @@ module MadnessEnjin {
         error(deferred: any, method:any, silent:boolean, data:any, status:number, headers:any, config:any) {
             if (data && (data.error === 'Token Expired' || data.error === 'Invalid Token')) {
                 console.log('Bad Token'); 
-            } else {
-                console.log('Failed to talk to API');
+            } else if (data && !data.success && data.error) {
+                alert(data.error);
             }
             silent ? null : this.$rootScope.$broadcast('loading:hide');
             

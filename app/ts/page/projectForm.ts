@@ -15,6 +15,9 @@ module MadnessEnjin {
             protected Project
         ) {
             // ON LOAD
+            this.project = {
+                public: true
+            };
             enjin.api.get(`user/repos`).then((res) => {
                 this.organizations = res.data;
             }); 

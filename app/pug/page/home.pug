@@ -1,11 +1,19 @@
-ion-view.page-home(view-title='Home')
+ion-view.page-home(view-title='Home' cache-view='false')
     ion-content(padding='true')
-        .card
-            ion-item(ng-repeat='project in ctrl.projects') {{project.name}}
-    button(
-        mfb-menu
+        fallback(
+            ng-if='!ctrl.projects.length'
+            message='Tap + Button to Create a Project'
+            icon='ion-plus-circled'
+            ui-sref='createProject'
+            style='cursor:pointer'
+        )
+        .row
+            .col-xs(ng-repeat='project in ctrl.projects')
+                .card
+                    ion-item {{project.name}}
+    mfb-menu(
         position='br'
         resting-icon='ion-plus-round'
         active-icon='ion-plus-round'
-        ui-sref="newProject"
+        ui-sref="createProject"
     )

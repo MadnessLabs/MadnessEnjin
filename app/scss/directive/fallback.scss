@@ -1,0 +1,43 @@
+// IMPORTS
+@import "../variables";
+
+// COMPONENT STYLES
+fallback {
+    display: block;
+    margin: 0 auto;
+    i {
+        width:100%;
+        display:block;
+        text-align: center;
+        font-size:200px;
+        color: #666666;
+    }
+    p {
+        font-size:14px;
+        width:100%;
+        text-align:center;
+        color: #FFFFFF;
+        text-transform: capitalize;
+        padding-top: 10px;
+    }
+
+    @media (max-width: $screen-xl) {
+
+    }
+
+    @media (max-width: $screen-lg) {
+
+    }
+
+    @media (max-width: $screen-md) {
+
+    }
+
+    @media (max-width: $screen-sm) {
+
+    }
+
+    @media (max-width: $screen-xs) {
+
+    }
+}

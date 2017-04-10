@@ -29,8 +29,8 @@
         "controller": "MadnessEnjin.LoginController",
         "controllerAs": "ctrl"
     }, {
-        "state": "newProject",
-        "url": "/projects/new",
+        "state": "createProject",
+        "url": "/projects/create",
         "templateUrl": "html/page/projectForm.html",
         "controller": "MadnessEnjin.ProjectFormController",
         "controllerAs": "ctrl"

@@ -23,15 +23,23 @@ ion-view.page-projectForm(view-title='New Project')
                 required='true'
                 auto-focus='true'
             )
-    button(
-        mfb-menu
+            enjin-input(
+                model='ctrl.project.description'
+                placeholder='Describe your new app'
+                name='description'
+            )
+            h2 Visibility
+            ion-toggle(
+                ng-model='ctrl.project.public' 
+                toggle-class='toggle-positive'
+            ) {{ctrl.project.public ? "Public" : "Private"}}
+    mfb-menu(
         position='bl'
         resting-icon='ion-arrow-left-c'
         active-icon='ion-arrow-left-c'
         ng-click='ctrl.back()'
     )
-    button(
-        mfb-menu
+    mfb-menu(
         position='br'
         resting-icon='ion-checkmark-round'
         active-icon='ion-checkmark-round'

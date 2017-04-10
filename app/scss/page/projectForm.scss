@@ -8,13 +8,19 @@
         width: 90%;
         margin: 0 auto;
         display: block;
+        .item-toggle {
+            background-color: transparent;
+            border: none;
+            color: #FFFFFF;
+        }
     }
 
     h2 {
+        display: block;
         font-size: 16px;
         color: #666666;
         font-weight: bold;
-        margin-top: 15px;
+        padding-top: 10px;
         text-indent: 15px;
     }
 
