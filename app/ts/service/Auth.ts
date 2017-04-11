@@ -134,6 +134,7 @@ module MadnessEnjin {
                 this.$state.go('login');
                 localStorage.clear();
                 delete this.enjin.session;
+                delete this.$rootScope.session;
             }
         } 
     } 

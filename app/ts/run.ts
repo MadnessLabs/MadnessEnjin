@@ -39,6 +39,10 @@ module MadnessEnjin {
                 $ionicSideMenuDelegate.toggleLeft();
             };
 
+            $rootScope.logout = function() {
+                enjin.auth.logout();
+            };
+
             Platform.run();
         }
     }
