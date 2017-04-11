@@ -11,6 +11,9 @@ ion-view.page-home(view-title='Home' cache-view='false')
             .col-xs(ng-repeat='project in ctrl.projects')
                 .card
                     ion-item {{project.name}}
+                    .button-bar
+                        a.button.button-clear.button-dark.icon-left.ion-social-github(ng-href='https://github.com/{{project.github}}' target='_blank') Repo
+                        a.button.button-clear.button-dark.icon-right.ion-earth(ng-href='http://{{project.name}}.madnessenjin.net' target='_blank') Test
     mfb-menu(
         position='br'
         resting-icon='ion-plus-round'
