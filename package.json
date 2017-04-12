@@ -1,6 +1,6 @@
 {
   "name": "madnessenjin",
-  "version": "1.0.0-beta",
+  "version": "1.0.0",
   "description": "The build process used by Madness Labs to build Ionic hybrid apps",
   "scripts": {
     "postinstall": "gulp reinstall",
