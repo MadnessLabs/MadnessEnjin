@@ -25,5 +25,8 @@ html(lang="en")
     body(ng-app=name)
         ion-nav-bar.bar-positive.has-tabs-top
             ion-nav-buttons(side="right")
-                a.button.button-icon.icon.ion-power(ng-click='$root.logout()')
+                a(
+                    ng-style='{backgroundImage: "url(" + $root.session.user.photoURL + ")"}'
+                    ui-sref='settings'
+                )
         ion-nav-view

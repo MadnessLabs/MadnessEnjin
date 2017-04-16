@@ -1,6 +1,6 @@
 {
     "name": "MadnessEnjin",
-    "type": "madnessionic",
+    "stack": "madnessionic",
     "description": "The build process used by Madness Labs to build Ionic hybrid apps",
     "author": {
         "name": "Madness Labs",
@@ -15,32 +15,44 @@
     "url": "http://madnessenjin.net/",
     "version": "1.0.0-alpha",
     "defaultRoute": "home",
-    "routes": [{
-        "state": "home",
-        "url": "/projects",
-        "templateUrl": "html/page/home.html",
-        "controller": "MadnessEnjin.HomeController",
-        "controllerAs": "ctrl",
-        "resolve": "AuthResolver"
-    }, {
-        "state": "login",
-        "url": "/login",
-        "templateUrl": "html/page/login.html",
-        "controller": "MadnessEnjin.LoginController",
-        "controllerAs": "ctrl"
-    }, {
-        "state": "createProject",
-        "url": "/projects/create",
-        "templateUrl": "html/page/projectForm.html",
-        "controller": "MadnessEnjin.ProjectFormController",
-        "controllerAs": "ctrl"
-    }],
+    "routes": [
+        {
+            "state": "home",
+            "url": "/projects",
+            "templateUrl": "html/page/home.html",
+            "controller": "MadnessEnjin.HomeController",
+            "controllerAs": "ctrl",
+            "resolve": "AuthResolver"
+        },
+        {
+            "state": "login",
+            "url": "/login",
+            "templateUrl": "html/page/login.html",
+            "controller": "MadnessEnjin.LoginController",
+            "controllerAs": "ctrl"
+        },
+        {
+            "state": "createProject",
+            "url": "/projects/create",
+            "templateUrl": "html/page/projectForm.html",
+            "controller": "MadnessEnjin.ProjectFormController",
+            "controllerAs": "ctrl"
+        },
+        {
+            "state": "settings",
+            "url": "/settings",
+            "templateUrl": "html/page/settings.html",
+            "controller": "MadnessEnjin.SettingsController",
+            "controllerAs": "ctrl"
+        }
+    ],
     "plugins": [
         "ionic",
         "ngCordova",
         "firebase",
         "ngCordovaOauth",
-        "ng-mfb"
+        "ng-mfb",
+        "angular-clipboard"
     ],
     "google": {
         "analytics": {
@@ -137,7 +149,8 @@
             "node_modules/firebase/firebase.js",
             "node_modules/jssha/src/sha.js",
             "node_modules/ng-cordova-oauth/dist/ng-cordova-oauth.js",
-            "node_modules/ng-material-floating-button/src/mfb-directive.js"
+            "node_modules/ng-material-floating-button/src/mfb-directive.js",
+            "node_modules/angular-clipboard/angular-clipboard.js"
         ],
         "build": [
             "build/js/app.js",

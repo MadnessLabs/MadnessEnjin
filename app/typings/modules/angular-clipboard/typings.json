@@ -1,0 +1,8 @@
+{
+  "resolution": "main",
+  "tree": {
+    "src": "https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/215055b6c6ae3898b031529c4af278678873d677/angular-clipboard/index.d.ts",
+    "raw": "registry:dt/angular-clipboard#1.5.0+20161108152032",
+    "typings": "https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/215055b6c6ae3898b031529c4af278678873d677/angular-clipboard/index.d.ts"
+  }
+}

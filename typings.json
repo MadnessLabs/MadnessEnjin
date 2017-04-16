@@ -33,5 +33,8 @@
         "ionic": "github:DefinitelyTyped/DefinitelyTyped/ionic/ionic.d.ts#98d3168c2c570352a3a7393788e2ec9fbb08ade6",
         "jquery": "github:DefinitelyTyped/DefinitelyTyped/jquery/jquery.d.ts#fa8d9683f37d07ed79617a6e037916c6718aeb11",
         "keyboard": "github:DefinitelyTyped/DefinitelyTyped/cordova-ionic/plugins/keyboard.d.ts#05557455c49043ff0189182e27c9e04403a70802"
+    },
+    "dependencies": {
+        "angular-clipboard": "registry:dt/angular-clipboard#1.5.0+20161108152032"
     }
 }

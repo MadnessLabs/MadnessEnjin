@@ -1,0 +1,14 @@
+ion-view.page-settings(view-title='settings')
+    ion-content
+        .card
+            ion-list
+                ion-item
+                    h2 Name
+                    p {{$root.session.user.displayName}}
+                ion-item
+                    h2 Email
+                    p {{$root.session.user.email}}
+                a.item.item-icon-right(clipboard text='$root.session.token')
+                    h2 Secret Token
+                    p DO NOT SHARE THIS (Click to Copy)
+                    i.icon.ion-android-clipboard

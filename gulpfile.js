@@ -3,7 +3,7 @@
 fs           = require('fs');
 gulp         = require('gulp');
 env          = JSON.parse(fs.readFileSync('.env'));
-startEnjin   = require(env.enjinPath + '/app/enjin/' + env.type);
+startEnjin   = require(env.enjinPath + '/app/enjin/' + env.stack);
 
  /////////////////////////////////////
 // ON LOAD
@@ -13,7 +13,7 @@ taskDir = configJSON.taskDir ? process.cwd() + '/' + configJSON.taskDir : proces
  /////////////////////////////////////
 // TASKS
 require('gulp-require-tasks')({
-    path: env.enjinPath + 'app/enjin/' + env.type + '/tasks',
+    path: env.enjinPath + 'app/enjin/' + env.stack + '/tasks',
     gulp: gulp
 });
 

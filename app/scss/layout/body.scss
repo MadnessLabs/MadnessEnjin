@@ -21,6 +21,16 @@ body {
     }
 }
 
+ion-header-bar {
+    .buttons-right.header-item a {
+        height: 35px;
+        width: 35px;
+        border-radius: 100%;
+        background-size: cover;
+        background-position: center;
+    }
+}
+
 .state-loading{
     transition: all 2s ease;
 }

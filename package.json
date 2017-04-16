@@ -8,6 +8,7 @@
     "build": "gulp build"
   },
   "dependencies": {
+    "angular-clipboard": "^1.5.0",
     "angularfire": "^2.3.0",
     "firebase": "^3.7.5",
     "fireenjin": "github:madnesslabs/fireenjin",
