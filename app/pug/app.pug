@@ -24,6 +24,8 @@ html(lang="en")
             script(src="js/enjin.js")
     body(ng-app=name)
         ion-nav-bar.bar-positive.has-tabs-top
+            ion-nav-buttons(side="left")
+                ion-nav-back-button
             ion-nav-buttons(side="right")
                 a(
                     ng-style='{backgroundImage: "url(" + $root.session.user.photoURL + ")"}'
