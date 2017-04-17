@@ -39,6 +39,7 @@ module MadnessEnjin {
             }
 
             this.Project.create(this.project, (data) => {
+                console.log(data.logs);
                 this.back();
             });
         }
