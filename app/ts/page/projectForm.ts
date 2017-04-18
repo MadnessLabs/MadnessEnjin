@@ -23,11 +23,6 @@ module MadnessEnjin {
             }); 
         }
 
-        back() {
-            this.$ionicViewSwitcher.nextDirection('back');
-            this.$ionicHistory.backView() ? this.$ionicHistory.goBack() : this.$state.go('home');
-        }
-
         submit() {
             this.$scope.$broadcast('submitForm');
         }

@@ -33,12 +33,6 @@ ion-view.page-projectForm(view-title='Create Project')
                 toggle-class='toggle-positive'
             ) {{ctrl.project.public ? "Public" : "Private"}}
     mfb-menu(
-        position='bl'
-        resting-icon='ion-arrow-left-c'
-        active-icon='ion-arrow-left-c'
-        ng-click='ctrl.back()'
-    )
-    mfb-menu(
         position='br'
         resting-icon='ion-checkmark-round'
         active-icon='ion-checkmark-round'
