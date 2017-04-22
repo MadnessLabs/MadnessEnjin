@@ -32,6 +32,10 @@ module MadnessEnjin {
             this.$scope.$broadcast('submitForm');
         }
 
+        cleanSubdomain(name) {
+            return name.replace(/[^0-9a-z]/gi, '');
+        }
+
         save() {
             if (!this.project.name) {
                 alert('Please enter a name for your new project.');

@@ -23,6 +23,13 @@ ion-view.page-projectForm(view-title='Create Project')
                 auto-focus='true'
             )
             enjin-input(
+                model='ctrl.project.subdomain'
+                placeholder='{{ctrl.cleanSubdomain(ctrl.project.name)}}'
+                name='name'
+                required='true'
+                auto-focus='true'
+            )
+            enjin-input(
                 model='ctrl.project.description'
                 placeholder='Describe your new app'
                 name='description'
