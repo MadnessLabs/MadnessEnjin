@@ -33,6 +33,9 @@ module MadnessEnjin {
         }
 
         cleanSubdomain(name) {
+            if (!name.length) {
+                return 'subdomain';
+            }
             return name.replace(/[^0-9a-z]/gi, '');
         }
 
