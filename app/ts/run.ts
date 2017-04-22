@@ -19,10 +19,6 @@ module MadnessEnjin {
                 url: enjin.url
             };
 
-            // $rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState) {
-            //     $rootScope.showSidebar = true;
-            // });
-
             $rootScope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState) {
                 $state.previous = fromState;
             });
@@ -34,10 +30,6 @@ module MadnessEnjin {
             $rootScope.$on('loading:hide', function() {
                 $ionicLoading.hide();
             });
-
-            $rootScope.toggleMenu = function() {
-                $ionicSideMenuDelegate.toggleLeft();
-            };
 
             $rootScope.logout = function() {
                 enjin.auth.logout();

@@ -1,4 +1,7 @@
 ion-view.page-projectForm(view-title='Create Project')
+    ion-nav-bar.bar-positive.has-tabs-top
+        ion-nav-buttons(side="left")
+            a.button.button-icon.icon.ion-arrow-left-c(ng-click='ctrl.back()')
     ion-content
         form(
             submit-on='submitForm'

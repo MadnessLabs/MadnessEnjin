@@ -25,7 +25,7 @@ module MadnessEnjin {
 
         back() {
             this.$ionicViewSwitcher.nextDirection('back');
-            this.$ionicHistory.backView() ? this.$ionicHistory.goBack() : this.$state.go('home');
+            this.$ionicHistory.backView() ? this.$ionicHistory.goBack() : this.$state.go('menu.projects');
         }
 
         submit() {

@@ -1,9 +1,11 @@
+
 @import '../variables';
 @import '../mixin/clearfix';
 
 body {
     @include clearfix();
     width: 100%;
+    color: #FFFFFF;
 }
 
 .pane {

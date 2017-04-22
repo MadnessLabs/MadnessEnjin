@@ -1,0 +1,20 @@
+ion-view.page-menu(view-title='Madness Enjin' cache-view='false')
+    ion-tabs.tabs-positive.tabs-icon-top.tabs-top
+        ion-tab(
+            title='Projects'
+            icon='ion-erlenmeyer-flask'
+            ui-sref='menu.projects'
+        )
+        ion-tab(
+            title='Plugins'
+            icon='ion-wand'
+            ui-sref='menu.plugins'
+        )
+    ion-content.has-tabs-top(padding='true')
+        ui-view(name="tab")
+    mfb-menu(
+        position='br'
+        resting-icon='ion-plus-round'
+        active-icon='ion-plus-round'
+        ng-click='ctrl.add()'
+    )
