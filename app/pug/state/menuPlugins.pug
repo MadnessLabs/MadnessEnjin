@@ -12,6 +12,10 @@
                 img(ng-src='{{plugin.user.avatar}}')
                 h2 {{plugin.name}}
                 p {{plugin.description || 'Plugin by ' + plugin.user.name}}
+                i.icon.ion-ios-book(
+                    ng-if='plugin.json.docs'
+                    ng-click='$root.openTab($event, plugin.json.docs)'
+                )
                 i.icon.ion-social-github(
                     ng-if='plugin.json.repo'
                     ng-click='$root.openTab($event, plugin.json.repo)'
