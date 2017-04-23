@@ -8,10 +8,9 @@ module MadnessEnjin {
         
         constructor(
             protected enjin,
-            protected $ionicHistory,
+            protected $rootScope,
             protected $scope,
             protected $state,
-            protected $ionicViewSwitcher,
             protected Project
         ) {
             // ON LOAD
@@ -21,11 +20,6 @@ module MadnessEnjin {
             enjin.api.get(`user/repos`).then((res) => {
                 this.organizations = res.data;
             }); 
-        }
-
-        back() {
-            this.$ionicViewSwitcher.nextDirection('back');
-            this.$ionicHistory.backView() ? this.$ionicHistory.goBack() : this.$state.go('menu.projects');
         }
 
         submit() {
@@ -47,7 +41,7 @@ module MadnessEnjin {
 
             this.Project.create(this.project, (data) => {
                 console.log(data.logs);
-                this.back();
+                this.$rootScope.back();
             });
         }
     }

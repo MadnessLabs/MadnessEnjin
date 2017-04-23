@@ -13,6 +13,20 @@
         .ion-search {
             font-size: 25px;
         }
+        .item-icon-right {
+            i {
+                color: $theme-dark-gray;
+            }
+            &:hover {
+                cursor: pointer;
+                h2 {
+                    color: $theme-primary;
+                }
+            }
+            i.icon:hover {
+                color: $theme-primary;
+            }
+        }
     }
     @media (max-width: $screen-xl) {
 

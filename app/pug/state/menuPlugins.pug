@@ -5,10 +5,14 @@
                 label.item-input-wrapper
                     i.icon.ion-search.placeholder-icon
                     input(type='search' ng-model='ctrl.search' placeholder='Search')
-            ion-item.item-avatar(
+            ion-item.item-avatar.item-icon-right(
                 ng-repeat='plugin in tab.plugins | filter:ctrl.search'
                 ui-sref='viewPlugin({id:plugin.id})'
             )
                 img(ng-src='{{plugin.user.avatar}}')
                 h2 {{plugin.name}}
                 p {{plugin.description || 'Plugin by ' + plugin.user.name}}
+                i.icon.ion-social-github(
+                    ng-if='plugin.json.repo'
+                    ng-click='$root.openTab($event, plugin.json.repo)'
+                )

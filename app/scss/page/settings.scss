@@ -3,6 +3,28 @@
 
 // PAGE STYLES
 .page-settings {
+    .card {
+        max-width: 600px;
+        margin: 15px auto;
+    }
+
+    .button {
+        max-width: 600px;
+        margin: 0 auto 30px;
+    }
+
+    .item-icon-right {
+        i.icon {
+            color: $theme-dark-gray;
+        }
+        &:hover {
+            cursor: pointer;
+            i.icon, h2 {
+                color: $theme-primary;
+            }
+        }
+    } 
+
     @media (max-width: $screen-xl) {
 
     }

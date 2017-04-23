@@ -13,21 +13,19 @@ module MadnessEnjin {
         constructor(
             protected enjin,
             protected $state,
-            protected $ionicHistory,
-            protected $ionicViewSwitcher,
             $stateParams
         ) {
             // ON LOAD
             this.title = 'Create Plugin';
             this.endpoint = `plugin`;
             this.plugin = {
-                json: '{\n\t"name": "",\n\t"description": ""\n}'
+                jsonString: '{\n\t"name": "",\n\t"description": ""\n}'
             };
             this.aceOptions = {
                 mode: 'json',
                 theme: 'ambiance',
                 advanced: {
-                    enableBasicAutocompletion: true,
+                    enableBasicAutocompletion: false,
                     enableLiveAutocompletion: false,
                     autoScrollEditorIntoView: true
                 },
@@ -51,13 +49,8 @@ module MadnessEnjin {
             }
         }
 
-        back() {
-            this.$ionicViewSwitcher.nextDirection('back');
-            this.$ionicHistory.backView() ? this.$ionicHistory.goBack() : this.$state.go('menu.plugins');
-        }
-
         submit() {
-            var pluginJSON = JSON.parse(this.plugin.json);
+            var pluginJSON = JSON.parse(this.plugin.jsonString);
             if (!pluginJSON || !pluginJSON.name) {
                 alert('Plugin must at least contain an object with a name.');
                 return false;

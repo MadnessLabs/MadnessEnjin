@@ -10,7 +10,6 @@ module MadnessEnjin {
             API,
             $state, 
             $ionicLoading, 
-            $ionicSideMenuDelegate,
             Platform
         ) {
             $rootScope.host = {
@@ -33,6 +32,17 @@ module MadnessEnjin {
 
             $rootScope.logout = function() {
                 enjin.auth.logout();
+            };
+
+            $rootScope.back = function() {
+                history.back();
+            };
+
+            $rootScope.openTab = function(event, link, target = '_blank', opts = null) {
+                event.preventDefault();
+                event.stopPropagation();
+                var win = window.open(link, target, opts);
+                win.focus();
             };
 
             Platform.run();
