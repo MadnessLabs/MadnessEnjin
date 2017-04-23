@@ -8,6 +8,7 @@ module MadnessEnjin {
         title: string;
         endpoint: string;
         hideSaveButton: boolean;
+        id: number;
 
         constructor(
             protected enjin,
@@ -40,7 +41,8 @@ module MadnessEnjin {
             };
 
             if ($stateParams.id) {
-                this.endpoint = `plugin/${$stateParams.id}`;
+                this.id = $stateParams.id;
+                this.endpoint = `plugin/${this.id}`;
                 this.enjin.api.get(this.endpoint).then((response) => {
                     this.plugin = response.data;
                     this.title = this.plugin.name;

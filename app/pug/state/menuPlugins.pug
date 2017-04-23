@@ -5,9 +5,10 @@
                 label.item-input-wrapper
                     i.icon.ion-search.placeholder-icon
                     input(type='search' ng-model='ctrl.search' placeholder='Search')
-            ion-item(
+            ion-item.item-avatar(
                 ng-repeat='plugin in tab.plugins | filter:ctrl.search'
                 ui-sref='viewPlugin({id:plugin.id})'
             )
+                img(ng-src='{{plugin.user.avatar}}')
                 h2 {{plugin.name}}
-                p {{plugin.description}}
+                p {{plugin.description || 'Plugin by ' + plugin.user.name}}

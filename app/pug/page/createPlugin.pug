@@ -9,7 +9,7 @@ ion-view.page-createPlugin(view-title='Create Plugin' cache-view='false')
             data-tap-disabled='true'
         )
     mfb-menu(
-        ng-if='!ctrl.hideSaveButton'
+        ng-if='!ctrl.id || ctrl.plugin.user.token === ctrl.enjin.session.token'
         position='br'
         resting-icon='ion-checkmark-round'
         active-icon='ion-checkmark-round'
