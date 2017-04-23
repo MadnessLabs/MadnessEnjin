@@ -7,6 +7,7 @@ module MadnessEnjin {
         plugin: any;
         title: string;
         endpoint: string;
+        hideSaveButton: boolean;
 
         constructor(
             protected enjin,
@@ -43,6 +44,7 @@ module MadnessEnjin {
                 this.enjin.api.get(this.endpoint).then((response) => {
                     this.plugin = response.data;
                     this.title = this.plugin.name;
+                    this.hideSaveButton = !this.plugin.isOwner;
                 });
             }
         }

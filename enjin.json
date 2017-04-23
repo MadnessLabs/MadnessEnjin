@@ -18,7 +18,7 @@
     "routes": [
         {
             "state": "menu",
-            "url": "/app",
+            "url": "/dash",
             "templateUrl": "html/page/menu.html",
             "controller": "MadnessEnjin.MenuController",
             "controllerAs": "ctrl",
@@ -34,7 +34,7 @@
         },
         {
             "state": "createProject",
-            "url": "app/projects/create",
+            "url": "create/project",
             "templateUrl": "html/page/projectForm.html",
             "controller": "MadnessEnjin.ProjectFormController",
             "controllerAs": "ctrl"
@@ -70,14 +70,14 @@
         },
         {
             "state": "createPlugin",
-            "url": "app/plugins/create",
+            "url": "/create/plugin",
             "templateUrl": "html/page/createPlugin.html",
             "controller": "MadnessEnjin.CreatePluginController",
             "controllerAs": "ctrl"
         },
         {
             "state": "viewPlugin",
-            "url": "app/plugins/:id",
+            "url": "/plugins/:id",
             "templateUrl": "html/page/createPlugin.html",
             "controller": "MadnessEnjin.CreatePluginController",
             "controllerAs": "ctrl"
