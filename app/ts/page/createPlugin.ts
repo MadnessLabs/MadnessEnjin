@@ -5,20 +5,26 @@ module MadnessEnjin {
     class CreatePluginController {
         aceOptions: any;
         plugin: any;
+        title: string;
+        endpoint: string;
 
         constructor(
             protected enjin,
-            protected $state
+            protected $state,
+            protected $ionicHistory,
+            protected $ionicViewSwitcher,
+            $stateParams
         ) {
             // ON LOAD
+            this.title = 'Create Plugin';
+            this.endpoint = `plugin`;
             this.plugin = {
                 json: '{\n\t"name": "",\n\t"description": ""\n}'
             };
-
             this.aceOptions = {
                 mode: 'json',
                 theme: 'ambiance',
-                advanced:{
+                advanced: {
                     enableBasicAutocompletion: true,
                     enableLiveAutocompletion: false,
                     autoScrollEditorIntoView: true
@@ -30,7 +36,20 @@ module MadnessEnjin {
                         editor.on(name, stop);
                     });
                 }
-            };  
+            };
+
+            if ($stateParams.id) {
+                this.endpoint = `plugin/${$stateParams.id}`;
+                this.enjin.api.get(this.endpoint).then((response) => {
+                    this.plugin = response.data;
+                    this.title = this.plugin.name;
+                });
+            }
+        }
+
+        back() {
+            this.$ionicViewSwitcher.nextDirection('back');
+            this.$ionicHistory.backView() ? this.$ionicHistory.goBack() : this.$state.go('menu.plugins');
         }
 
         submit() {
@@ -41,7 +60,7 @@ module MadnessEnjin {
             }
             this.plugin.name = pluginJSON.name;
             this.plugin.description = pluginJSON.description ? pluginJSON.description : '';
-            this.enjin.api.post('plugin', this.plugin).then((response) => {
+            this.enjin.api.post(this.endpoint, this.plugin).then((response) => {
                 this.$state.go('menu.plugins');
             });
         }

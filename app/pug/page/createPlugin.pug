@@ -1,9 +1,12 @@
-ion-view.page-createPlugin(view-title='Create Plugin')
+ion-view.page-createPlugin(view-title='Create Plugin' cache-view='false')
+    ion-nav-title {{ctrl.title}}
+    ion-nav-buttons(side='left')
+        a.button.button-icon.icon.ion-arrow-left-c(ng-click='ctrl.back()')
     ion-content(scroll='false')
         div(
-            ace-editor="ctrl.aceOptions" 
-            ng-model="ctrl.plugin.json"
-            data-tap-disabled="true"
+            ace-editor='ctrl.aceOptions' 
+            ng-model='ctrl.plugin.json'
+            data-tap-disabled='true'
         )
     mfb-menu(
         position='br'

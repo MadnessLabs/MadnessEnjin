@@ -1,6 +1,13 @@
 .state-menuPlugins.has-header
     .card
         ion-list
-            ion-item(ng-repeat='plugin in tab.plugins')
+            ion-item.item-divider.item-input-inset
+                label.item-input-wrapper
+                    i.icon.ion-search.placeholder-icon
+                    input(type='search' ng-model='ctrl.search' placeholder='Search')
+            ion-item(
+                ng-repeat='plugin in tab.plugins | filter:ctrl.search'
+                ui-sref='viewPlugin({id:plugin.id})'
+            )
                 h2 {{plugin.name}}
                 p {{plugin.description}}
