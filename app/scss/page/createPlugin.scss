@@ -3,6 +3,9 @@
 
 // PAGE STYLES
 .page-createPlugin {
+    .ace_editor {
+        height: calc(100vh - 50px);
+    }
     @media (max-width: $screen-xl) {
 
     }

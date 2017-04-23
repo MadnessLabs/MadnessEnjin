@@ -20,7 +20,7 @@ module MadnessEnjin {
                 }).then((response) => {
                     if (response.success) {
                         this.enjin.auth.setSessionVar('token', response.data.token);
-                        this.$state.go('home');
+                        this.$state.go('menu.projects');
                     } else {
                         console.log(response.data);
                     }

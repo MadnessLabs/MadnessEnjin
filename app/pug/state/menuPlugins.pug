@@ -1,2 +1,6 @@
 .state-menuPlugins.has-header
-    | Your New State     
+    .card
+        ion-list
+            ion-item(ng-repeat='plugin in tab.plugins')
+                h2 {{plugin.name}}
+                p {{plugin.description}}

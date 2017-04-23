@@ -3,6 +3,17 @@
 
 // STATE STYLES
 .state-menuProjects {
+    .col-xs {
+        padding: 15px;
+    }
+    .card {
+        width: 250px;
+        display: block;
+        margin: 0 auto;
+        .item {
+            text-transform: capitalize;
+        }
+    }
     @media (max-width: $screen-xl) {
 
     }

@@ -1,3 +1,13 @@
-ion-view.page-createPlugin(view-title='createPlugin')
-    ion-content
-        
+ion-view.page-createPlugin(view-title='Create Plugin')
+    ion-content(scroll='false')
+        div(
+            ace-editor="ctrl.aceOptions" 
+            ng-model="ctrl.plugin.json"
+            data-tap-disabled="true"
+        )
+    mfb-menu(
+        position='br'
+        resting-icon='ion-checkmark-round'
+        active-icon='ion-checkmark-round'
+        ng-click='ctrl.submit()'
+    )

@@ -8,6 +8,8 @@
     "build": "gulp build"
   },
   "dependencies": {
+    "ace-angular": "^0.1.1",
+    "ace-builds": "^1.2.6",
     "angular-clipboard": "^1.5.0",
     "angularfire": "^2.3.0",
     "firebase": "^3.7.5",

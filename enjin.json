@@ -15,66 +15,75 @@
     "url": "http://madnessenjin.net/",
     "version": "1.0.0-alpha",
     "defaultRoute": "menu.projects",
-    "routes": [{
-        "state": "menu",
-        "url": "/app",
-        "templateUrl": "html/page/menu.html",
-        "controller": "MadnessEnjin.MenuController",
-        "controllerAs": "ctrl",
-        "resolve": "AuthResolver",
-        "abstract": true
-    }, {
-        "state": "login",
-        "url": "/login",
-        "templateUrl": "html/page/login.html",
-        "controller": "MadnessEnjin.LoginController",
-        "controllerAs": "ctrl"
-    }, {
-        "state": "createProject",
-        "url": "/projects/create",
-        "templateUrl": "html/page/projectForm.html",
-        "controller": "MadnessEnjin.ProjectFormController",
-        "controllerAs": "ctrl"
-    }, {
-        "state": "settings",
-        "url": "/settings",
-        "templateUrl": "html/page/settings.html",
-        "controller": "MadnessEnjin.SettingsController",
-        "controllerAs": "ctrl"
-    }, {
-        "state": "menu.projects",
-        "url": "/projects",
-        "views": {
-            "tab": {
-                "templateUrl": "html/state/menuProjects.html",
-                "controller": "MadnessEnjin.MenuProjectsController",
-                "controllerAs": "tab"
+    "routes": [
+        {
+            "state": "menu",
+            "url": "/app",
+            "templateUrl": "html/page/menu.html",
+            "controller": "MadnessEnjin.MenuController",
+            "controllerAs": "ctrl",
+            "resolve": "AuthResolver",
+            "abstract": true
+        },
+        {
+            "state": "login",
+            "url": "/login",
+            "templateUrl": "html/page/login.html",
+            "controller": "MadnessEnjin.LoginController",
+            "controllerAs": "ctrl"
+        },
+        {
+            "state": "createProject",
+            "url": "/projects/create",
+            "templateUrl": "html/page/projectForm.html",
+            "controller": "MadnessEnjin.ProjectFormController",
+            "controllerAs": "ctrl"
+        },
+        {
+            "state": "settings",
+            "url": "/settings",
+            "templateUrl": "html/page/settings.html",
+            "controller": "MadnessEnjin.SettingsController",
+            "controllerAs": "ctrl"
+        },
+        {
+            "state": "menu.projects",
+            "url": "/projects",
+            "views": {
+                "tab": {
+                    "templateUrl": "html/state/menuProjects.html",
+                    "controller": "MadnessEnjin.MenuProjectsController",
+                    "controllerAs": "tab"
+                }
             }
-        }
-    }, {
-        "state": "menu.plugins",
-        "url": "/plugins",
-        "views": {
-            "tab": {
-                "templateUrl": "html/state/menuPlugins.html",
-                "controller": "MadnessEnjin.MenuPluginsController",
-                "controllerAs": "tab"
+        },
+        {
+            "state": "menu.plugins",
+            "url": "/plugins",
+            "views": {
+                "tab": {
+                    "templateUrl": "html/state/menuPlugins.html",
+                    "controller": "MadnessEnjin.MenuPluginsController",
+                    "controllerAs": "tab"
+                }
             }
+        },
+        {
+            "state": "createPlugin",
+            "url": "/createPlugin",
+            "templateUrl": "html/page/createPlugin.html",
+            "controller": "MadnessEnjin.CreatePluginController",
+            "controllerAs": "ctrl"
         }
-    }, {
-        "state": "createPlugin",
-        "url": "/createPlugin",
-        "templateUrl": "html/page/createPlugin.html",
-        "controller": "MadnessEnjin.CreatePluginController",
-        "controllerAs": "ctrl"
-    }],
+    ],
     "plugins": [
         "ionic",
         "ngCordova",
         "firebase",
         "ngCordovaOauth",
         "ng-mfb",
-        "angular-clipboard"
+        "angular-clipboard",
+        "ace.angular"
     ],
     "google": {
         "analytics": {
@@ -172,7 +181,10 @@
             "node_modules/jssha/src/sha.js",
             "node_modules/ng-cordova-oauth/dist/ng-cordova-oauth.js",
             "node_modules/ng-material-floating-button/src/mfb-directive.js",
-            "node_modules/angular-clipboard/angular-clipboard.js"
+            "node_modules/angular-clipboard/angular-clipboard.js",
+            "node_modules/ace-builds/src-min/ace.js",
+            "node_modules/ace-builds/src-min/ext-language_tools.js",
+            "node_modules/ace-angular/ace-angular.js"
         ],
         "build": [
             "build/js/app.js",

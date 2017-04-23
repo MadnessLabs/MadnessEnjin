@@ -3,6 +3,11 @@
 
 // STATE STYLES
 .state-menuPlugins {
+    .card {
+        display: block;
+        max-width: 600px;
+        margin: 15px auto;
+    }
     @media (max-width: $screen-xl) {
 
     }
